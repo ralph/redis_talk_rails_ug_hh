@@ -4,15 +4,33 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
+  heroku: 
+    group: 
+    - :default
+    version: ">= 0"
   rmagick: 
     group: 
     - :default
     version: ">= 0"
 specs: 
+- rake: 
+    version: 0.8.7
 - bluecloth: 
     version: 2.0.7
+- configuration: 
+    version: 1.1.0
 - gli: 
     version: 1.1.1
+- json_pure: 
+    version: 1.4.3
+- launchy: 
+    version: 0.3.5
+- mime-types: 
+    version: "1.16"
+- rest-client: 
+    version: 1.4.2
+- heroku: 
+    version: 1.9.11
 - json: 
     version: 1.4.3
 - nokogiri: 
@@ -25,7 +43,7 @@ specs:
     version: "1.0"
 - showoff: 
     version: 0.2.4
-hash: ff77a64b526cff89e2aba0d7b2e6ee1abd55397c
+hash: 3ec6b29c0c14415fc62bdd6944e8640f51fb7629
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
