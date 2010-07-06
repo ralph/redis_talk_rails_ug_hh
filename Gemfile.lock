@@ -16,6 +16,10 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
+  ohm: 
+    group: 
+    - :default
+    version: ">= 0"
   redis: 
     group: 
     - :default
@@ -47,17 +51,19 @@ specs:
     version: 1.4.3
 - nokogiri: 
     version: 1.4.2
-- rack: 
-    version: 1.2.1
 - redis: 
     version: 2.0.3
+- ohm: 
+    version: 0.0.36
+- rack: 
+    version: 1.2.1
 - rmagick: 
     version: 2.13.1
 - sinatra: 
     version: "1.0"
 - showoff: 
     version: 0.2.4
-hash: ed8cb956845033d837fc751af579ed67b01a6d74
+hash: 068aa8b2c8439c33752e058e2cb3f9fbe79bca23
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
