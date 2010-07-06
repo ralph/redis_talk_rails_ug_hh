@@ -4,6 +4,10 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
+  rmagick: 
+    group: 
+    - :default
+    version: ">= 0"
 specs: 
 - bluecloth: 
     version: 2.0.7
@@ -15,11 +19,13 @@ specs:
     version: 1.4.2
 - rack: 
     version: 1.2.1
+- rmagick: 
+    version: 2.13.1
 - sinatra: 
     version: "1.0"
 - showoff: 
     version: 0.2.4
-hash: 1893193d663bd43b5cceeec8378b018150e79393
+hash: ff77a64b526cff89e2aba0d7b2e6ee1abd55397c
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

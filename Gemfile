@@ -1,3 +1,4 @@
 source :gemcutter
-gem "showoff"
+gem 'showoff'
+gem 'rmagick'
 
