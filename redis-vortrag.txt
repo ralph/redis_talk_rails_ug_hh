@@ -1,0 +1,17 @@
+Plot für RUG-Vortrag:
+
+- Was ist Redis? (Ralph)
+- Datentypen (Ralph)
+- Funktionen auf den Datentypen (Ralph)
+- Redis in Ruby (Mark)
+  - redis.rb
+  - Ohm
+  - Performancevergleich mit AR
+    - erstellen und wiederauslesen [done]
+    - sortedsets?? (Name-, count-Spalte; sortiert nach count)
+    - noch ein Beispiel, wo MySQL besser ist -> nicht gut, bei (für redis) "unstrukturierten Daten" (man muss bei Redis vorher wissen, wie man mit den Daten arbeiten will, bei SQL nicht zwangsweise)
+- Praxisbeispiele (Mark??)
+  - (redis in practive who is online)
+  - XINGs People Directory?
+  - http://gist.github.com/296921
+  - weitere Use cases: http://www.paperplanes.de/2010/2/16/a_collection_of_redis_use_cases.html
