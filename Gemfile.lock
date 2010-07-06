@@ -1,5 +1,9 @@
 --- 
 dependencies: 
+  activerecord: 
+    group: 
+    - :default
+    version: ">= 0"
   showoff: 
     group: 
     - :default
@@ -12,9 +16,17 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
+  redis: 
+    group: 
+    - :default
+    version: ">= 0"
 specs: 
 - rake: 
     version: 0.8.7
+- activesupport: 
+    version: 2.3.8
+- activerecord: 
+    version: 2.3.8
 - bluecloth: 
     version: 2.0.7
 - configuration: 
@@ -37,13 +49,15 @@ specs:
     version: 1.4.2
 - rack: 
     version: 1.2.1
+- redis: 
+    version: 2.0.3
 - rmagick: 
     version: 2.13.1
 - sinatra: 
     version: "1.0"
 - showoff: 
     version: 0.2.4
-hash: 3ec6b29c0c14415fc62bdd6944e8640f51fb7629
+hash: ed8cb956845033d837fc751af579ed67b01a6d74
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
