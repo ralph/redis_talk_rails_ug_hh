@@ -1,4 +1,4 @@
-{ "name": "My Preso", "sections": [ {"section":"01_was_ist_redis"},
+{ "name": "Redis", "sections": [ {"section":"01_was_ist_redis"},
                                     {"section":"02_datentypen"},
                                     {"section":"03_funktionen"},
                                     {"section":"04_redis_in_ruby"},

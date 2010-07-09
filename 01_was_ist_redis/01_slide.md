@@ -1,16 +1,83 @@
 !SLIDE 
-# My Presentation #
+# Redis #
+# A fast key-value store #
+
+!SLIDE smbullets
+# What we will talk about: #
+
+* What is redis?
+* Which datatypes does it support?
+* Which operations can you perform in each of the datatypes?
+* How to use Redis with Ruby?
+* Real world usage examples
+
+!SLIDE
+# What is redis? #
+
+!SLIDE
+# A key value store. #
+
+!SLIDE
+# Think: #
+    @@@ Ruby
+    {:key => 'value', :ruby => 'the awesomeness'}
+
+!SLIDE bullets
+# BUT! #
+* Over the network
+* With complex datatypes and operations
+* With notifications
+
+!SLIDE bullets
+# And most importantly...#
+* Crazily fast!
+* Multiple 10.000 operations/sec on a laptop
+
+!SLIDE
+# Show me an example! (1/2) #
+    @@@ Ruby
+    # Ruby land:
+    h = {}
+    h[:my_key] = 'my_value'
+    => "my_value"
+
+    # Redis land:
+    redis.set :my_key, 'my_value'
+    => "OK"
+
+!SLIDE
+# Show me an example! (2/2) #
+    @@@ Ruby
+    # Ruby land:
+    h[:my_key]
+    => "my_value"
+
+    # Redis land:
+    redis.get :my_key
+    => "my_value"
+
+!SLIDE bullets
+# What more can I do with it??? #
+* It all boils down to saving strings
+* But this is already a lot!
 
 !SLIDE bullets incremental
-# Bullet Points #
+# The keys... #
+* Needed for every operation
 
-* first point
-* second point
-* third point
+!SLIDE bullets
+# Sample format: #
+* article:123:title
+* comment:456:body
+* model:id:attribute
 
-!SLIDE bullets incremental
-# Hullu! #
+!SLIDE
+# The values... #
 
-* oink
-* foo
-* bar
+!SLIDE bullets
+# Different datatypes #
+* String
+* List
+* Set
+* Sorted Set
+* Hash
