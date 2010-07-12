@@ -4,8 +4,7 @@ class Post < Ohm::Model
   attribute :title
   attribute :body
   reference :author, Person
-  set :categories, Category
-  counter :votes
+  index :title
   
   def validate
     assert_present :title
