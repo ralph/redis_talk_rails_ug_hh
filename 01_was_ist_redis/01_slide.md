@@ -20,12 +20,13 @@
 !SLIDE
 # Think: #
     @@@ Ruby
-    {:key => 'value', :ruby => 'the awesomeness'}
+    {:key => 'value', :ruby => 'awesomeness'}
 
 !SLIDE bullets
 # BUT! #
 * Over the network
-* With complex datatypes and operations
+* With complex datatypes
+* With atomic operations
 * With notifications
 
 !SLIDE bullets
@@ -58,7 +59,7 @@
 
 !SLIDE bullets
 # What more can I do with it??? #
-* It all boils down to saving strings
+* It all boils down to saving/retrieving strings
 * But this is already a lot!
 
 !SLIDE bullets incremental
@@ -75,7 +76,7 @@
 # The values... #
 
 !SLIDE bullets
-# Different datatypes #
+# Datatypes #
 * String
 * List
 * Set
