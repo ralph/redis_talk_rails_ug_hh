@@ -1,11 +1,13 @@
 !SLIDE 
 # Redis with ruby #
 
+
 !SLIDE ruby
 # redis-rb #
     @@@ ruby
     require 'redis'
     r = Redis.new
+
                   
 !SLIDE ruby
 # defaults #
@@ -29,9 +31,11 @@
      => "OK"
     r.get "some_key"
      => "special value"
+
      
 !SLIDE bullet 
 # or more ruby-like... #
+
 
 !SLIDE ruby 
 
@@ -65,16 +69,19 @@
      => "1"
     r.llen "my_list"
      => 1
+
     
 !SLIDE bullets
 # Ohm #
 * Object-hash mapping library
+
 
 !SLIDE ruby
     @@@ ruby
     class Person < Ohm::Model
       attribute :name
     end
+
     
 !SLIDE ruby
     @@@ ruby
@@ -96,6 +103,7 @@
     "Person:2:name" [string] => "ralph"
     "Person:all"    [set]    => ["1", "2"]
     "Person:id"     [string] => "2"
+
     
 !SLIDE bullets
 # associations
@@ -126,6 +134,7 @@
      => true
     p.author = Person[1]
     p.save
+
     
 !SLIDE ruby
     @@@ ruby
@@ -141,9 +150,11 @@
     
     # "MQ=="     == Base64.encode64("1")
     # "YXNkZg==" == Base64.encode64("asdf")
+
     
 !SLIDE bullets
 # query-interface #
+
 
 !SLIDE ruby
     @@@ ruby
@@ -152,9 +163,11 @@
     Post.find(:title => "some title")\
         .sort_by(:title)
 
+
 !SLIDE bullets
 # redis-objects
 ## "People that are wrapping ORM’s around Redis are missing the point" ##
+
 
 !SLIDE ruby
 ## standalone usage ##
@@ -166,15 +179,22 @@
     list = Redis::List.new("mylist", redis)
     list << "a"
     list.include? "b" # false
+
     
 !SLIDE ruby
 ## complex data types ##
     @@@ ruby
-    @list = Redis::List.new("mylist", redis, :marshal => true)
-    @list << {:title => "redis is awesome!", :author => "mark"}
+    @list = Redis::List.new("mylist", redis, 
+                            :marshal => true)
+    @list << {:title => "redis is awesome!", 
+              :author => "mark"}
+
     
-!SLIDE ruby
+!SLIDE bullets
 # integrate redis-objects into your AR-Model #
+
+
+!SLIDE ruby
     @@@ ruby
     class Post < AR:Base
       include Redis::Objects
@@ -184,8 +204,59 @@
       value :author_url
     end
 
+
 !SLIDE ruby
     @@@ ruby
     p = Post.find_by_title("redis is awesome!")
     p.comments << "great lib!"
     p.author_url = "somewhere"
+
+
+!SLIDE bullets
+# What's about performance? #
+
+
+!SLIDE ruby
+    @@@ ruby
+    class Employee < AR::Base
+    end
+    
+    # insert some data
+    1_000_000.times do |i|
+      Employee.create(:name => "employee_#{i}",
+                      :salary => rand(100000))
+    end
+
+    # fetching some data
+    100000.times do |i|
+      Employee.find(rand(n+1))
+    end
+    
+    
+!SLIDE bullets
+## insert: 1931s ##
+##  fetch: 59s   ##
+
+!SLIDE bullets
+# and now with redis... #
+
+!SLIDE ruby
+    @@@ ruby
+    Employee = Struct.new(:id, :name, :salary)
+    
+    # insert some data
+    1_000_000.times do |i|
+      e = Employee.new(i+1, "employee_#{i}", 
+                       rand(100000))
+      redis.set("employee_#{i+1}",e.to_a.to_json)
+    end
+
+    # fetching some data
+    100000.times do |i|
+      Employee.new(*JSON.parse(
+        redis.get("employee_#{rand(n+1)}")))
+    end
+
+!SLIDE bullets
+## insert: 101s => 10 times faster ##
+## fetch: 11s => 6 times faster ##
