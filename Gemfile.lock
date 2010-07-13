@@ -4,6 +4,10 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
+  mysql: 
+    group: 
+    - :default
+    version: ">= 0"
   showoff: 
     group: 
     - :default
@@ -20,11 +24,11 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  redis: 
+  ohm: 
     group: 
     - :default
     version: ">= 0"
-  ohm: 
+  redis: 
     group: 
     - :default
     version: ">= 0"
@@ -53,12 +57,14 @@ specs:
     version: 1.9.11
 - json: 
     version: 1.4.3
+- mysql: 
+    version: 2.8.1
 - nokogiri: 
     version: 1.4.2
 - redis: 
     version: 2.0.3
 - ohm: 
-    version: 0.0.37
+    version: 0.0.38
 - rack: 
     version: 1.2.1
 - redis-objects: 
@@ -69,7 +75,7 @@ specs:
     version: "1.0"
 - showoff: 
     version: 0.2.4
-hash: 64ffb9a139b94c0d94e14645fc94fcae65183b94
+hash: 44df74a3c5c655d5ba728f2eddfb84f94b0fd919
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
