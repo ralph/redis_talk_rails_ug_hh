@@ -15,6 +15,9 @@
 # What is redis? #
 
 !SLIDE
+# REmote DIctionary Server #
+
+!SLIDE
 # A key value store. #
 
 !SLIDE
@@ -24,10 +27,16 @@
 
 !SLIDE bullets
 # BUT! #
-* Over the network
-* With complex datatypes
-* With atomic operations
-* With notifications
+* over the network
+* with complex datatypes
+* with atomic operations
+
+!SLIDE bullets
+# More features... #
+* expiry
+* master/slave replication
+* notifications (publish/subscribe)
+* different persistence modes (from fast to secure)
 
 !SLIDE bullets
 # And most importantly...#

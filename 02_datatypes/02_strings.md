@@ -5,16 +5,16 @@
 !SLIDE bullets
 # STRING operations #
 * get/set
-* multiple get/mset
+* multiple get/set
 * append
 * substring
 
 !SLIDE bullets
 # STRING atomic operations #
 * atomic get and set (in one step)
-* increment/decrement (by)
 * set ttl while getting/setting
 * check for existance while getting/setting
+* increment/decrement (by)
 
 !SLIDE bullets
 # incr on a STRING??? #
