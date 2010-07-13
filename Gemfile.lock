@@ -8,6 +8,10 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
+  redis-objects: 
+    group: 
+    - :default
+    version: ">= 0"
   heroku: 
     group: 
     - :default
@@ -16,11 +20,11 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  ohm: 
+  redis: 
     group: 
     - :default
     version: ">= 0"
-  redis: 
+  ohm: 
     group: 
     - :default
     version: ">= 0"
@@ -54,16 +58,18 @@ specs:
 - redis: 
     version: 2.0.3
 - ohm: 
-    version: 0.0.36
+    version: 0.0.37
 - rack: 
     version: 1.2.1
+- redis-objects: 
+    version: 0.3.1
 - rmagick: 
     version: 2.13.1
 - sinatra: 
     version: "1.0"
 - showoff: 
     version: 0.2.4
-hash: 068aa8b2c8439c33752e058e2cb3f9fbe79bca23
+hash: 64ffb9a139b94c0d94e14645fc94fcae65183b94
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

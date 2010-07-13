@@ -35,11 +35,11 @@
 
 !SLIDE ruby 
 
-   @@@ ruby
-   r["some_key"] = "value 2"
-    => "value 2"
-   r["some_key"]
-    => "value 2"
+    @@@ ruby
+    r["some_key"] = "value 2"
+     => "value 2"
+    r["some_key"]
+     => "value 2"
      
 
 !SLIDE ruby
@@ -58,7 +58,7 @@
     
 !SLIDE ruby
 
-   @@@ ruby
+    @@@ ruby
     r.lpop "my_list"
      => "3"
     r.rpop "my_list"
@@ -149,4 +149,43 @@
     @@@ ruby
     Post[1]
     Post.all
-    Post.find(:title => "some title").sort_by(:title)
+    Post.find(:title => "some title")\
+        .sort_by(:title)
+
+!SLIDE bullets
+# redis-objects
+## "People that are wrapping ORM’s around Redis are missing the point" ##
+
+!SLIDE ruby
+## standalone usage ##
+    @@@ ruby
+    require 'redis'
+    require 'redis/list'
+    
+    redis = Redis.new
+    list = Redis::List.new("mylist", redis)
+    list << "a"
+    list.include? "b" # false
+    
+!SLIDE ruby
+## complex data types ##
+    @@@ ruby
+    @list = Redis::List.new("mylist", redis, :marshal => true)
+    @list << {:title => "redis is awesome!", :author => "mark"}
+    
+!SLIDE ruby
+# integrate redis-objects into your AR-Model #
+    @@@ ruby
+    class Post < AR:Base
+      include Redis::Objects
+      
+      list :comments
+      set :tags
+      value :author_url
+    end
+
+!SLIDE ruby
+    @@@ ruby
+    p = Post.find_by_title("redis is awesome!")
+    p.comments << "great lib!"
+    p.author_url = "somewhere"
