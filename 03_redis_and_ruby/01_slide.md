@@ -69,6 +69,8 @@
      => "1"
     r.llen "my_list"
      => 1
+    r.lindex "my_list", 0
+     => "2"
 
     
 !SLIDE bullets
@@ -106,8 +108,7 @@
 
     
 !SLIDE bullets
-# associations
-# validations
+# associations & validations
 
     
 !SLIDE ruby
@@ -179,15 +180,19 @@
     list = Redis::List.new("mylist", redis)
     list << "a"
     list.include? "b" # false
+    list.values # ["a"]
+    list.shift
+    list.clear
+    # ...
 
     
 !SLIDE ruby
 ## complex data types ##
     @@@ ruby
-    @list = Redis::List.new("mylist", redis, 
-                            :marshal => true)
-    @list << {:title => "redis is awesome!", 
-              :author => "mark"}
+    list = Redis::List.new("mylist", redis, 
+                           :marshal => true)
+    list << {:title => "redis is awesome!", 
+             :author => "mark"}
 
     
 !SLIDE bullets
