@@ -1,18 +1,3 @@
-!SLIDE bullets
-# practical examples #
-
-!SLIDE bullets
-# Who's online #
-
-
-!SLIDE center
-![whos_online1](whos_online_1.png)
-
-
-!SLIDE center
-![whos_online1](whos_online_2.png)
-
-
 !SLIDE
 # Worldcup prediction game #
 
