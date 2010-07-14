@@ -1,5 +1,6 @@
 { "name": "Redis", "sections": [ {"section":"01_what_is_redis"},
                                  {"section":"02_datatypes"},
-                                 {"section":"03_redis_and_ruby"},
-                                 {"section":"04_practical_examples"}
+                                 {"section":"03_data_modeling"},
+                                 {"section":"04_redis_and_ruby"},
+                                 {"section":"05_practical_examples"}
                                ]}
