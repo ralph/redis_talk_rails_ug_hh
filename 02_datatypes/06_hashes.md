@@ -2,6 +2,12 @@
 # HASH #
 * no surprises, does exactly what you expect
 
+!SLIDE center
+# For Rubyists #
+    @@@ Ruby
+    {:key => {:hkey_1 => 'v1', :hkey_2 => 'v2'}}
+### (different than a real Ruby Hash, of course) ###
+
 !SLIDE bullets
 # HASH: single/multiple key operations #
 * set or delete one/multiple key-value-pair(s)

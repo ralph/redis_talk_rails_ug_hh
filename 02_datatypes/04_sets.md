@@ -3,6 +3,12 @@
 * collections of items
 * an item is included or not
 
+!SLIDE center
+# For Rubyists #
+    @@@ Ruby
+    {:key => Set.new(['value 1', 'value 2'])}
+### (different than a real Ruby Set, of course) ###
+
 !SLIDE bullets
 # single SET operations (1/2) #
 * add a member

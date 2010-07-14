@@ -2,6 +2,12 @@
 # STRING #
 * most basic datatype
 
+!SLIDE center
+# For Rubyists #
+    @@@ Ruby
+    {:key => 'value'}
+### (different than a real Ruby String, of course) ###
+
 !SLIDE bullets
 # STRING operations #
 * get/set

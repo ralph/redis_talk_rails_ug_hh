@@ -43,6 +43,10 @@
 * ~550 times faster 
 
 !SLIDE bullets
+# Similar case: Reputation points #
+* e.g. in forums, social networks etc.
+
+!SLIDE bullets
 # Conclusion #
 * Redis optimizes for specific use cases
 * Huge benefits if your case fits

@@ -3,6 +3,12 @@
 * concatenated lists
 * access via index
 
+!SLIDE center
+# For Rubyists #
+    @@@ Ruby
+    {:key => ['value 1', 'value 2']}
+### (different than a real Ruby Array, of course) ###
+
 !SLIDE bullets
 # LIST operations (1/2) #
 * number of items

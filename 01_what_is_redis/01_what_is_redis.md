@@ -2,12 +2,12 @@
 # Redis #
 # A fast key-value store #
 
-!SLIDE smbullets
+!SLIDE bullets
 # What we will talk about: #
 
 * What is redis?
 * Which datatypes does it support?
-* Which operations can you perform in each of the datatypes?
+* Which operations are available for each datatype?
 * How to use Redis with Ruby?
 * Real world usage examples
 
@@ -20,7 +20,7 @@
 !SLIDE
 # A key value store. #
 
-!SLIDE
+!SLIDE center
 # Think: #
     @@@ Ruby
     {:key => 'value', :ruby => 'awesomeness'}
@@ -42,6 +42,7 @@
 # And most importantly...#
 * Crazily fast!
 * Multiple 10.000 operations/sec on a laptop
+* All data is kept in memory
 
 !SLIDE
 # Show me an example! (1/2) #

@@ -13,3 +13,11 @@
 * expire (set ttl)
 * get ttl
 
+!SLIDE
+# Atomic transactions #
+    MULTI
+    ...
+    SET chicken egg
+    SET egg chicken
+    ...
+    EXEC
