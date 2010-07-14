@@ -46,9 +46,3 @@
 # Similar case: Reputation points #
 * e.g. in forums, social networks etc.
 
-!SLIDE bullets
-# Conclusion #
-* Redis optimizes for specific use cases
-* Huge benefits if your case fits
-* Think about your reads before organizing your writes
-* And vice versa!
