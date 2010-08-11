@@ -38,9 +38,9 @@
 !SLIDE bullets
 # The benchmark #
 * 1.000.000 entries
-* SQL: ~165 ms
 * Redis: ~0.3 ms
-* ~550 times faster 
+* SQL: ~165 ms (Redis ~550 times faster)
+* indexed SQL: ~0.6 ms (Redis 2 times faster)
 
 !SLIDE bullets
 # Similar case: Reputation points #

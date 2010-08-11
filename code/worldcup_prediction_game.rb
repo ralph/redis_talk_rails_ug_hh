@@ -14,6 +14,7 @@ ActiveRecord::Base.establish_connection(
 class Score < ActiveRecord::Base
 end
 
+Score.delete_all
 n.times do |i|
   Score.create(:user_id => i, :score => rand(50))
 end
